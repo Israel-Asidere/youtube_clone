@@ -19,7 +19,25 @@ const ChannelDetail = () => {
       setVideos(data?.items)
     )
   }, [id])
-  return <div>ChannelDetail</div>
+  return (
+    <Box minHeight='95vh'>
+      <Box>
+        <div
+          style={{
+            background:
+              'linear-gradient(90deg, rgba(71,212,208,1) 0%, rgba(18,133,121,1) 33%, rgba(9,93,121,1) 53%, rgba(251,0,255,1) 100%)',
+            zIndex: 10,
+            height: '300px'
+          }}
+        />
+        <ChannelCard channelDetail={channelDetail} marginTop='-110px' />
+      </Box>
+      <Box display='flex' p='2'>
+        <Box sx={{ mr: { sm: '100px' } }} />
+        <Videos videos={videos} />
+      </Box>
+    </Box>
+  )
 }
 
 export default ChannelDetail
